@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+         * Escribe un programa que dada una palabra en minúsculas, muestre en la consola la mitad de la palabra en minúsculas y la otra mitad en mayúsculas.
+         * Pistas:
+         * 1. Debes utilizar al menos 3 métodos de los vistos anteriormente
+         * 2. La mitad de una palabra contiene mitad de sus caracteres, para ello necesitarás saber cuantos caracteres tiene la palabra
+         * 3. Para poder modificar la mitad de la palabra (mayúsculas), necesitarás primero obtener una cadena que sólo tenga esa parte
+         * 4. Una vez que tengamos la mitad de la palabra en mayúsculas, tendrás que reemplazar una subcadena por otra
+         */
+
+         let palabra = prompt("introduce una palabra en minusculas");
+
+         let numeroLetras = palabra.length;
+
+         if (numeroLetras%2== 0)
+         {
+             let mitadPar = palabra.substring (numeroLetras/2);
+
+             let mayus = mitadPar.toUpperCase();
+
+             let reemplazar = palabra.replace(mitadPar, mayus);
+             console.log(reemplazar);
+         }
+         else
+         {
+             let mitadImpar = palabra.substring((numeroLetras/2 + 1));
+
+             let mayus = mitadImpar.toUpperCase();
+
+             let reemplazar = palabra.replace(mitadImpar, mayus);
+             console.log(reemplazar);
+         }
+        
+         
+
+    </script>
+</body>
+
+</html>
